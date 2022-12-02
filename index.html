@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css" />
+
+    <script type="text/javascript" src="https://unpkg.com/kokomi.js/build/kokomi.umd.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/three@0.144.0/build/three.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.11.1/dist/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="sketch"></div>
+    <div class="fixed z-5 loader-screen w-screen h-screen transition-all duration-300 bg-black">
+        <div class="absolute hv-center">
+            <div class="loading text-white text-3xl tracking-widest">
+                <span style="--i: 0">L</span>
+                <span style="--i: 1">O</span>
+                <span style="--i: 2">A</span>
+                <span style="--i: 3">D</span>
+                <span style="--i: 4">I</span>
+                <span style="--i: 5">N</span>
+                <span style="--i: 6">G</span>
+            </div>
+        </div>
+    </div>
+<div class="main-scene">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="relative w-screen h-screen">
+                    <div class="absolute top-12 left-24">
+                        <div class="webgl-text webgl-fixed text-white tracking-wide text-xl"
+                            data-webgl-text-color="#ffffff">
+                            alphardex</div>
+                    </div>
+                    <div class="absolute hv-center">
+                        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+                            <div class="webgl-text text-2xl text-white" data-webgl-text-color="#ffffff">I'm
+                            </div>
+                            <div class="webgl-text text-7xl text-white" data-webgl-text-color="#ffffff">A CREATIVE
+                                DEVELOPER
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute h-center bottom-12">
+                        <div id="scroll-hint" class="webgl-text text-white" data-webgl-text-color="#ffffff">Scroll To
+                            View More</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="relative w-screen h-screen">
+                    <div class="absolute top-0 left-0">
+                        <img class="webgl-img w-screen h-screen" data-webgl-img-id="1" data-webgl-mouse-follow="1"
+                            data-webgl-mouse-offset-x="0" data-webgl-mouse-offset-y="0"
+                            src="https://s2.loli.net/2022/09/08/gGY4VloDAeUwWxt.jpg" crossorigin="anonymous" alt="" />
+                    </div>
+                    <div class="absolute v-center left-30">
+                        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">I mainly focus
+                                on CSS and WebGL.
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">Creating cool 3D
+                                effects is
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">my favorite
+                                thing.
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">I made
+                                kokomi.js, which is
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">
+                                a nice library to create 3D effects.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="relative w-screen h-screen">
+                    <div class="absolute top-0 left-0">
+                        <img class="webgl-img w-screen h-screen" data-webgl-img-id="2" data-webgl-mouse-follow="1"
+                            data-webgl-mouse-offset-x="-0.2" data-webgl-mouse-offset-y="0"
+                            src="https://s2.loli.net/2022/11/03/ehAaUtrXv9xNmMD.jpg" crossorigin="anonymous" alt="" />
+                    </div>
+                    <div class="absolute v-center right-30">
+                        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">This kind of
+                                effect
+                                is
+                                called Raymarching.
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">It's a way to
+                                generate procedural
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">3D shapes with
+                                only Maths.
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">This ball
+                                actually is two mixed sphere sdfs
+                            </div>
+                            <div class="webgl-text text-3xl text-white" data-webgl-text-color="#ffffff">
+                                which are distorted by classic perlin noise.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="relative w-screen h-screen">
+                    <div class="absolute hv-center">
+                        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+                            <div class="webgl-text text-2xl text-white" data-webgl-text-color="#ffffff">That's end, just
+                                play the ball with your mouse :)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="webgl-snap-point webgl-snap-point-1 fixed v-center right-80 w-60 h-60"></div>
+    <div class="webgl-snap-point webgl-snap-point-2 fixed v-center left-80 w-60 h-60"></div>
+</div>
+
+
+<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
