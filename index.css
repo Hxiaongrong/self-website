@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#sketch {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+
+body {
+    background: black;
+}
+
+#sketch {
+    position: fixed;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* swiper */
+.swiper {
+    width: 100vw;
+    height: 100vh;
+}
+
+.swiper-slide {
+    width: 100vw;
+    height: 100vh;
+}
+
+#sketch,
+.main-scene {
+    opacity: 0;
+}
+
+.loading span {
+    animation: blur 1.5s calc(var(--i) / 5 * 1s) alternate infinite;
+}
+
+@keyframes blur {
+    to {
+        filter: blur(5px);
+    }
+}
